@@ -2,3 +2,5 @@
 runtime/logs
 
 go-gin-example
+
+logs/

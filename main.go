@@ -5,19 +5,28 @@ import (
 	"log"
 	"syscall"
 
+	"go-gin-example/models"
+	"go-gin-example/pkg/logging"
 	"go-gin-example/pkg/setting"
 	"go-gin-example/routers"
-
-	"go-gin-example/cron"
 
 	"github.com/fvbock/endless"
 )
 
 func main() {
-	endless.DefaultReadTimeOut = setting.ReadTimeOut
-	endless.DefaultWriteTimeOut = setting.WriteTimeOut
+
+	setting.SetUp()
+
+	models.SetUp()
+
+	models.CloseDB()
+
+	logging.SetUp()
+
+	endless.DefaultReadTimeOut = setting.ServerSetting.ReadTimeout
+	endless.DefaultWriteTimeOut = setting.ServerSetting.WriteTimeout
 	endless.DefaultMaxHeaderBytes = 1 << 20
-	endpoint := fmt.Sprintf(":%d", setting.HTTPPort)
+	endpoint := fmt.Sprintf(":%d", setting.ServerSetting.HttpPort)
 
 	server := endless.NewServer(endpoint, routers.InitRouter())
 
@@ -26,7 +35,7 @@ func main() {
 	}
 
 	err := server.ListenAndServe()
-	go cron.CronMain()
+	// go cron.CronMain()
 	if err != nil {
 		log.Printf("server error: %v", err)
 	}

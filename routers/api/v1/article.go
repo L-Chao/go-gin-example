@@ -69,7 +69,7 @@ func GetArticles(c *gin.Context) {
 	if !valid.HasErrors() {
 		code = merror.SUCCESS
 
-		data["lists"] = models.GetArticles(utils.GetPage(c), setting.PageSize, maps)
+		data["lists"] = models.GetArticles(utils.GetPage(c), setting.AppSetting.PageSize, maps)
 		data["total"] = models.GetArticleTotal(maps)
 
 	} else {

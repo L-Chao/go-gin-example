@@ -13,7 +13,7 @@ func GetPage(c *gin.Context) int {
 	pageStr := c.Query("page")
 	page, _ := strconv.ParseInt(pageStr, 10, 32)
 	if page > 0 {
-		result = (int(page) - 1) * setting.PageSize
+		result = (int(page) - 1) * setting.AppSetting.PageSize
 	}
 	return result
 }

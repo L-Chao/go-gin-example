@@ -35,7 +35,7 @@ func GetTags(c *gin.Context) {
 		maps["state"] = int(state)
 	}
 	code := merror.SUCCESS
-	data["lists"] = models.GetTags(utils.GetPage(c), setting.PageSize, maps)
+	data["lists"] = models.GetTags(utils.GetPage(c), setting.AppSetting.PageSize, maps)
 	data["total"] = models.GetTagTotal(maps)
 
 	c.JSON(http.StatusOK, gin.H{

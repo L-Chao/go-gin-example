@@ -2,17 +2,25 @@ package logging
 
 import (
 	"fmt"
+	"go-gin-example/pkg/setting"
 	"log"
 	"os"
 	"time"
 )
 
 var (
-	LogSavePath = "runtime/logs/"
-	LogSaveName = "log"
-	LogFileExt  = "log"
-	TimeFormat  = "20060102"
+	LogSavePath string
+	LogSaveName string
+	LogFileExt  string
+	TimeFormat  string
 )
+
+func initLoggSetting() {
+	LogSavePath = setting.AppSetting.LogSavePath
+	LogSaveName = setting.AppSetting.LogSaveName
+	LogFileExt = setting.AppSetting.LogFileExt
+	TimeFormat = "20060102"
+}
 
 func getLogFilePath() string {
 	return LogSavePath

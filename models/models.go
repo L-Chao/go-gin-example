@@ -21,7 +21,7 @@ type Model struct {
 	DeletedOn  int `json:"deleted_on"`
 }
 
-func init() {
+func SetUp() {
 	var (
 		err         error
 		dbType      string
@@ -31,16 +31,12 @@ func init() {
 		host        string
 		tablePrefix string
 	)
-	sec, err := setting.Cfg.GetSection("databases")
-	if err != nil {
-		log.Fatal("fail to get section 'databases': ", err.Error())
-	}
-	dbType = sec.Key("TYPE").String()
-	dbName = sec.Key("NAME").String()
-	user = sec.Key("USER").String()
-	password = sec.Key("PASSWORD").String()
-	host = sec.Key("HOST").String()
-	tablePrefix = sec.Key("TABLE_PREFIX").String()
+	dbType = setting.DatabaseSetting.Type
+	dbName = setting.DatabaseSetting.Name
+	user = setting.DatabaseSetting.User
+	password = setting.DatabaseSetting.Password
+	host = setting.DatabaseSetting.Host
+	tablePrefix = setting.DatabaseSetting.TablePrefix
 	db, err = gorm.Open(dbType, fmt.Sprintf("%s:%s@tcp(%s)/%s?charset=utf8&parseTime=True&loc=Local",
 		user,
 		password,
