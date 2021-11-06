@@ -12,7 +12,7 @@ import (
 
 func UploadImage(c *gin.Context) {
 	code := merror.SUCCESS
-	data := make(map[string]interface{})
+	data := make(map[string]string)
 
 	file, image, err := c.Request.FormFile("image")
 	if err != nil {

@@ -19,8 +19,6 @@ func main() {
 
 	models.SetUp()
 
-	models.CloseDB()
-
 	logging.SetUp()
 
 	endless.DefaultReadTimeOut = setting.ServerSetting.ReadTimeout

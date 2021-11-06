@@ -1,6 +1,7 @@
 .vscode
 runtime/logs
-
+runtime/upload
+__debug_bin
 go-gin-example
 
 logs/

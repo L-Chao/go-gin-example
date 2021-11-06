@@ -5,7 +5,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/robfig/cron"
+	"github.com/robfig/cron/v3"
 )
 
 func CronMain() {

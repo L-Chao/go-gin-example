@@ -64,7 +64,7 @@ func SetUp() {
 	}
 
 	ServerSetting.ReadTimeout = ServerSetting.ReadTimeout * time.Second
-	ServerSetting.ReadTimeout = ServerSetting.WriteTimeout * time.Second
+	ServerSetting.WriteTimeout = ServerSetting.WriteTimeout * time.Second
 
 	err = Cfg.Section("database").MapTo(DatabaseSetting)
 	if err != nil {

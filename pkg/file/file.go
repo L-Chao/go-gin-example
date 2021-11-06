@@ -36,7 +36,7 @@ func IsNotExistMkDir(src string) error {
 }
 
 func MkDir(src string) error {
-	err := os.Mkdir(src, os.ModePerm)
+	err := os.MkdirAll(src, os.ModePerm)
 	if err != nil {
 		return err
 	}

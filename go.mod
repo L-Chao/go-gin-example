@@ -9,7 +9,7 @@ require (
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-ini/ini v1.63.2
 	github.com/jinzhu/gorm v1.9.16
-	github.com/robfig/cron v1.2.0
+	github.com/robfig/cron/v3 v3.0.1
 	github.com/swaggo/gin-swagger v1.3.3
 	github.com/swaggo/swag v1.7.4
 )
