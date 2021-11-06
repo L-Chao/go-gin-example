@@ -8,6 +8,8 @@ import (
 	"go-gin-example/pkg/setting"
 	"go-gin-example/routers"
 
+	"go-gin-example/cron"
+
 	"github.com/fvbock/endless"
 )
 
@@ -24,7 +26,7 @@ func main() {
 	}
 
 	err := server.ListenAndServe()
-
+	go cron.CronMain()
 	if err != nil {
 		log.Printf("server error: %v", err)
 	}
