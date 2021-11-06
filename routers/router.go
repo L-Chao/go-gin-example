@@ -8,6 +8,7 @@ import (
 	_ "go-gin-example/docs"
 	"go-gin-example/middleware/jwt"
 	"go-gin-example/pkg/setting"
+	"go-gin-example/routers/api"
 	v1 "go-gin-example/routers/api/v1"
 )
 
@@ -24,6 +25,7 @@ func InitRouter() *gin.Engine {
 
 	r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
+	r.POST("/upload", api.UploadImage)
 	apiv1 := r.Group("/api/v1")
 	apiv1.Use(jwt.JWT())
 	{
