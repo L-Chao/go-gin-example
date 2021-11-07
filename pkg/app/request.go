@@ -1,9 +1,9 @@
 package app
 
 import (
-	"go-gin-example/pkg/logging"
-
 	"github.com/astaxie/beego/validation"
+
+	"github.com/L-Chao/go-gin-example/pkg/logging"
 )
 
 func MarkErrors(errors []*validation.Error) {

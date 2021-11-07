@@ -1,6 +1,8 @@
 package export
 
-import "go-gin-example/pkg/setting"
+import (
+	"github.com/L-Chao/go-gin-example/pkg/setting"
+)
 
 func GetExcelFullUrl(name string) string {
 	return setting.AppSetting.ImagePrefixUrl + "/" + GetExcelPath() + name

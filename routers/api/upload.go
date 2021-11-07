@@ -3,10 +3,9 @@ package api
 import (
 	"net/http"
 
-	"go-gin-example/pkg/logging"
-	"go-gin-example/pkg/merror"
-	"go-gin-example/pkg/upload"
-
+	"github.com/L-Chao/go-gin-example/pkg/logging"
+	"github.com/L-Chao/go-gin-example/pkg/merror"
+	"github.com/L-Chao/go-gin-example/pkg/upload"
 	"github.com/gin-gonic/gin"
 )
 

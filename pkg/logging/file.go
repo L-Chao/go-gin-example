@@ -2,10 +2,11 @@ package logging
 
 import (
 	"fmt"
-	"go-gin-example/pkg/file"
-	"go-gin-example/pkg/setting"
 	"os"
 	"time"
+
+	"github.com/L-Chao/go-gin-example/pkg/file"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
 )
 
 func getLogFilePath() string {

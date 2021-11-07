@@ -1,11 +1,12 @@
 package cron
 
 import (
-	"go-gin-example/models"
 	"log"
 	"time"
 
 	"github.com/robfig/cron/v3"
+
+	"github.com/L-Chao/go-gin-example/models"
 )
 
 func CronMain() {

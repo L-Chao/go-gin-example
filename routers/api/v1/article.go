@@ -7,11 +7,11 @@ import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 
-	"go-gin-example/pkg/app"
-	"go-gin-example/pkg/merror"
-	"go-gin-example/pkg/setting"
-	"go-gin-example/pkg/utils"
-	"go-gin-example/service/article_service"
+	"github.com/L-Chao/go-gin-example/pkg/app"
+	"github.com/L-Chao/go-gin-example/pkg/merror"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
+	"github.com/L-Chao/go-gin-example/pkg/utils"
+	"github.com/L-Chao/go-gin-example/service/article_service"
 )
 
 func GetArticle(c *gin.Context) {

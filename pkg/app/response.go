@@ -1,9 +1,9 @@
 package app
 
 import (
-	"go-gin-example/pkg/merror"
-
 	"github.com/gin-gonic/gin"
+
+	"github.com/L-Chao/go-gin-example/pkg/merror"
 )
 
 type Gin struct {

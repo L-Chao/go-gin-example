@@ -5,7 +5,7 @@ import (
 
 	jwt "github.com/dgrijalva/jwt-go"
 
-	"go-gin-example/pkg/setting"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
 )
 
 var jwtSecret = []byte(setting.AppSetting.JwtSecret)

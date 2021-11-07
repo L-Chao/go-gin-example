@@ -6,12 +6,11 @@ import (
 
 	"github.com/gin-gonic/gin"
 
+	"github.com/L-Chao/go-gin-example/models"
+	"github.com/L-Chao/go-gin-example/pkg/merror"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
+	"github.com/L-Chao/go-gin-example/pkg/utils"
 	"github.com/astaxie/beego/validation"
-
-	"go-gin-example/models"
-	"go-gin-example/pkg/merror"
-	"go-gin-example/pkg/setting"
-	"go-gin-example/pkg/utils"
 )
 
 // @Summary 获取文章标签

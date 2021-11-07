@@ -5,12 +5,12 @@ import (
 	"log"
 	"syscall"
 
-	"go-gin-example/models"
-	"go-gin-example/pkg/logging"
-	"go-gin-example/pkg/setting"
-	"go-gin-example/routers"
-
 	"github.com/fvbock/endless"
+
+	"github.com/L-Chao/go-gin-example/models"
+	"github.com/L-Chao/go-gin-example/pkg/logging"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
+	"github.com/L-Chao/go-gin-example/routers"
 )
 
 func main() {

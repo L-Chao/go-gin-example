@@ -7,12 +7,11 @@ import (
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
 
-	_ "go-gin-example/docs"
-	"go-gin-example/middleware/jwt"
-	"go-gin-example/pkg/setting"
-	"go-gin-example/pkg/upload"
-	"go-gin-example/routers/api"
-	v1 "go-gin-example/routers/api/v1"
+	"github.com/L-Chao/go-gin-example/middleware/jwt"
+	"github.com/L-Chao/go-gin-example/pkg/setting"
+	"github.com/L-Chao/go-gin-example/pkg/upload"
+	"github.com/L-Chao/go-gin-example/routers/api"
+	v1 "github.com/L-Chao/go-gin-example/routers/api/v1"
 )
 
 func InitRouter() *gin.Engine {
