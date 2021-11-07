@@ -8,6 +8,7 @@ require (
 	github.com/fvbock/endless v0.0.0-20170109170031-447134032cb6
 	github.com/gin-gonic/gin v1.7.4
 	github.com/go-ini/ini v1.63.2
+	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/jinzhu/gorm v1.9.16
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/swaggo/gin-swagger v1.3.3
