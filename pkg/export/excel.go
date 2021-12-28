@@ -5,7 +5,7 @@ import (
 )
 
 func GetExcelFullUrl(name string) string {
-	return setting.AppSetting.ImagePrefixUrl + "/" + GetExcelPath() + name
+	return setting.AppSetting.PrefixUrl + "/" + GetExcelPath() + name
 }
 
 func GetExcelPath() string {
